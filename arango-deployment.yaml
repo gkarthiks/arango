@@ -69,8 +69,8 @@ roleRef:
   name: arango-deployment-operator
 subjects:
 - kind: ServiceAccount
-  name: default
-  namespace: default
+  name: blki-sa
+  namespace: blki
 
 ---
 
@@ -80,7 +80,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: arango-deployment-operator
-  namespace: default
+  namespace: blki
 spec:
   replicas: 2
   strategy:
